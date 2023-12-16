@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { Route, Routes, HashRouter as Router } from "react-router-dom";
 import './App.css';
+import ErrorBoundary from "./components/errors/ErrorBoundary";
+import UrlNotFound from "./components/errors/UrlNotFound";
+import Header from "./components/common/header/Header";
+import Home from "./components/home/Home";
+import SideMenu from "./components/common/header/SideMenu";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <div className="main-wrapper">
+          <Header></Header>
+         <main style={{marginTop:'97px'}}>
+         <ErrorBoundary>
+            <Routes>
+              <Route path='*' element={<UrlNotFound />} />
+              <Route path='/' element={<Home />} />
+            </Routes>
+          </ErrorBoundary>
+         </main>
+        </div>
+      </Router>
+    </>
   );
 }
 
