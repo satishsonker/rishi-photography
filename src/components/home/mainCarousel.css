@@ -1,0 +1,89 @@
+.banner .bg-image {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50%;
+    z-index: -1;
+    transition: all 1000ms ease-in-out;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://promo-theme.com/novo/wp-content/uploads/2019/08/slide31.jpg);
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 60px;
+    justify-content: center;
+}
+.banner
+{
+    position: relative;
+}
+
+.banner .bg-image .heading {
+    height: 90px;
+    color: var(--font-color);
+    font-size: 3rem;
+}
+
+.banner .bg-image .heading .heading-color {
+    color: var(--typing-text-color) !important;
+}
+
+.banner .bg-image small {
+    margin-top: 40px;
+    color: var(--font-color);
+}
+
+.banner .banner-dots{
+    position: absolute;
+    right: 7px;
+    color: gray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: flex-end;
+    transition: 0.5s all;
+}
+
+.banner .banner-dots .dot{
+    list-style: none;
+    transition: 0.5s all;
+}
+
+.banner .banner-dots .dot.active,.banner .banner-dots .dot.active:hover{
+    color: orange;
+    transition: 0.5s all;
+}
+
+.banner .banner-dots .dot:hover{
+    color: var(--font-color);
+    transition: 0.5s all;
+}
+
+.banner .banner-dots .dot.active::after{
+    content: "";
+    height: 31px;
+    border-left: 1px solid orange;
+    display: block;
+    width: 0;
+    margin-left: 8px;
+    transition: 0.5s all;
+}
+
+@media only screen and (max-width: 767px) {
+    .banner .bg-image {
+        padding: 0 30px;
+    }
+
+    .banner .bg-image .heading {
+        font-size: 1.4rem;
+    }
+    .banner .bg-image small {
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,41 @@
+.footer-social-button{
+    background-color: var(--social-share-bg-color);
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.footer-social-button a {
+    color: var(--font-color);
+    text-decoration: none;
+    margin-right: 11px;
+    transition: .5s all;
+}
+
+.footer-social-button a::after
+{
+    content: '';
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 5px;
+    display: inline-block;
+    margin-left: 10px;
+    height: 5px;
+    background: wheat;
+
+}
+.footer-social-button a:last-child::after
+{
+    border: 0px solid red;
+    background: transparent;
+}
+.footer-social-button a i{
+    margin-right: 5px;
+}
+.footer-social-button a span{
+    font-size: 14px;
+}
+
+.footer-social-button a:hover{
+    color: var(--header-menu-hover-color);
+    transition: .5s all;
+}

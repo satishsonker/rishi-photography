@@ -5,10 +5,26 @@
     --header-menu-font-size:14px;
     --header-menu-hover-color:orange;
     --header-menu-border-color:orange;
+    --header-sub-menu-color:orange;
     --side-menu-width:450px;
     --side-menu-footer-height:80px;
+    --typing-text-color:orange;
+    --footer-bg-color:#232323;
+    --social-share-bg-color:#111111;
+}
+
+.email-phone{
+    text-decoration: none;
+    color: var(--font-color);
 }
 
 .w100{
     width: 100%;
+}
+main{
+    margin: 0;
+    overflow:hidden;
+}
+body{
+    overflow-y: auto;
 }

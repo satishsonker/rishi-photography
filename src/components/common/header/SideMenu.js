@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SideMenuFooter from './SideMenuFooter'
+import EmailAndPhone from '../EmailAndPhone'
 
 export default function SideMenu({setDisplaySideMenu,displayMenu=false}) {
     return (
@@ -11,57 +12,57 @@ export default function SideMenu({setDisplaySideMenu,displayMenu=false}) {
                 </div>
                 <div className='side-menu-items'>
                     <div className='side-menu-item'>
-                        <div id="text-2" class="widget widget_text">
-                            <h5 class="widget-title">My name is Alex Novo,I’m a photographer.</h5>
-                            <div class="textwidget">
+                        <div id="text-2" className="widget widget_text">
+                            <h5 className="widget-title">My name is Alex Novo,I’m a photographer.</h5>
+                            <div className="textwidget">
                                 <p>The world without photography will be meaningless to us if there is no light and color, which opens up our minds and expresses passion.</p>
                             </div>
                         </div>
                     </div>
                     <div className='side-menu-item'>
-                        <div id="text-2" class="widget media-gallery">
-                            <h5 class="widget-title">Latest Photo</h5>
-                            <div id="gallery-1" class="gallery galleryid-977 gallery-columns-3 gallery-size-thumbnail">
-                                <dl class="gallery-item">
-                                    <dt class="gallery-icon landscape">
+                        <div id="text-2" className="widget media-gallery">
+                            <h5 className="widget-title">Latest Photo</h5>
+                            <div id="gallery-1" className="gallery">
+                                <dl className="gallery-item">
+                                    <dt className="gallery-icon landscape">
                                         <a href="https://promo-theme.com/novo/project1/">
-                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project1-150x150.jpg" className="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
                                         </a>
                                     </dt>
                                 </dl>
-                                <dl class="gallery-item">
-                                    <dt class="gallery-icon landscape">
+                                <dl className="gallery-item">
+                                    <dt className="gallery-icon landscape">
                                         <a href="https://promo-theme.com/novo/project13/">
-                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project13-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project13-150x150.jpg" className="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
                                         </a>
                                     </dt>
                                 </dl>
-                                <dl class="gallery-item">
-                                    <dt class="gallery-icon landscape">
+                                <dl className="gallery-item">
+                                    <dt className="gallery-icon landscape">
                                         <a href="https://promo-theme.com/novo/project14/">
-                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project14-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project14-150x150.jpg" className="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
                                         </a>
                                     </dt>
                                 </dl>
                                 <br style={{ clear: 'both' }} />
-                                <dl class="gallery-item">
-                                    <dt class="gallery-icon landscape">
+                                <dl className="gallery-item">
+                                    <dt className="gallery-icon landscape">
                                         <a href="https://promo-theme.com/novo/project10/">
-                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project10-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="https://promo-theme.com/novo/wp-content/uploads/2017/08/project10-150x150.jpg 150w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project10-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" />
+                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project10-150x150.jpg" className="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcSet="https://promo-theme.com/novo/wp-content/uploads/2017/08/project10-150x150.jpg 150w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project10-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" />
                                         </a>
                                     </dt>
                                 </dl>
-                                <dl class="gallery-item">
-                                    <dt class="gallery-icon landscape">
+                                <dl className="gallery-item">
+                                    <dt className="gallery-icon landscape">
                                         <a href="https://promo-theme.com/novo/project12/">
-                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project12-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="https://promo-theme.com/novo/wp-content/uploads/2017/08/project12-150x150.jpg 150w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project12-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" />
+                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project12-150x150.jpg" className="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcSet="https://promo-theme.com/novo/wp-content/uploads/2017/08/project12-150x150.jpg 150w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project12-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" />
                                         </a>
                                     </dt>
                                 </dl>
-                                <dl class="gallery-item">
-                                    <dt class="gallery-icon landscape">
+                                <dl className="gallery-item">
+                                    <dt className="gallery-icon landscape">
                                         <a href="https://promo-theme.com/novo/project6/">
-                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-150x150.jpg 150w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-300x300.jpg 300w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-1024x1024.jpg 1024w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-768x768.jpg 768w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-70x70.jpg 70w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-780x780.jpg 780w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-100x100.jpg 100w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6.jpg 1350w" sizes="(max-width: 150px) 100vw, 150px" />
+                                            <img src="https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-150x150.jpg" className="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcSet="https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-150x150.jpg 150w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-300x300.jpg 300w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-1024x1024.jpg 1024w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-768x768.jpg 768w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-70x70.jpg 70w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-780x780.jpg 780w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6-100x100.jpg 100w, https://promo-theme.com/novo/wp-content/uploads/2017/08/project6.jpg 1350w" sizes="(max-width: 150px) 100vw, 150px" />
                                         </a>
                                     </dt>
                                 </dl>
@@ -70,8 +71,8 @@ export default function SideMenu({setDisplaySideMenu,displayMenu=false}) {
                         </div>
                     </div>
                     <div className='side-menu-item' style={{ flexDirection: "column" }}>
-                        <div id="text-2" class="widget">
-                            <h5 class="widget-title">Categories</h5>
+                        <div id="text-2" className="widget">
+                            <h5 className="widget-title">Categories</h5>
                         </div>
                         <ol className='side-menu-item-menu'>
                             <li>
@@ -101,17 +102,17 @@ export default function SideMenu({setDisplaySideMenu,displayMenu=false}) {
                         </ol>
                     </div>
                     <div className='side-menu-item' style={{ flexDirection: "column" }}>
-                        <div id="text-2" class="widget">
-                            <h5 class="widget-title">Contact Us</h5>
+                        <div id="text-2" className="widget">
+                            <h5 className="widget-title">Contact Us</h5>
                         </div>
-                        <div class="textwidget custom-html-widget w100">
-                            <div class="contact-row">
-                                <span>Phone:</span>
-                                +1 (800) 456 37 11
+                        <div className="textwidget custom-html-widget w100">
+                            <div className="contact-row">
+                                <span>Phone : </span>
+                                <EmailAndPhone type="phone"></EmailAndPhone>
                             </div>
-                            <div class="contact-row"><
-                                span>Email:</span>
-                                example@promo-theme.com
+                            <div className="contact-row">
+                                <span>Email : </span>
+                                <EmailAndPhone type="mail"></EmailAndPhone>
                             </div>
                         </div>
                     </div>
