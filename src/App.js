@@ -12,14 +12,14 @@ function App() {
       <Router>
         <div className="main-wrapper">
           <Header></Header>
-         <main style={{marginTop:'97px'}}>
-         <ErrorBoundary>
-            <Routes>
-              <Route path='*' element={<UrlNotFound />} />
-              <Route path='/' element={<Home />} />
-            </Routes>
-          </ErrorBoundary>
-         </main>
+          <main style={{ marginTop: '0px' }}>
+            <ErrorBoundary>
+              <Routes>
+                <Route path='*' element={<UrlNotFound />} />
+                <Route path='/' element={<Home />} />
+              </Routes>
+            </ErrorBoundary>
+          </main>
         </div>
       </Router>
     </>

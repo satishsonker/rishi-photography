@@ -1,11 +1,22 @@
 .site-header {}
 
-.site-header.light-header {
-    background-color: var(--header-bg);
+.site-header.bg-transparent {
+    background-color: transparent;
     color: var(--font-color);
 }
 
-.site-header.fixed-header {}
+.site-header.bg-dark {
+    background-color: black;
+    color: var(--font-color);
+}
+
+.site-header.fixed-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
 
 .header-main-block {
     height: 97px;
@@ -36,7 +47,7 @@
     color: var(--font-color);
     text-transform: uppercase;
     height: 75px;
-    transition: 0.5s all ease-in;
+    transition: 0.3s all ease-in;
 }
 
 .bar-icon {
@@ -58,35 +69,35 @@
     display: flex;
     padding: 0;
     align-items: center;
-    transition: 0.5s all;
+    transition: 0.3s all;
+    margin: 0;
 }
 
 .header-menu .menu .menu-item {
     width: max-content;
     padding: 0 10px;
-    background-color: var(--header-bg);
     color: var(--font-color);
     font-size: var(--header-menu-font-size);
-    transition: 0.5s all;
+    transition: 0.3s all;
     height: 28px;
 }
 
 .header-menu .menu .menu-item a:hover,
 .header-menu .menu .menu-item:hover {
     color: var(--header-menu-hover-color);
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .header-menu .menu .current-menu-item.menu-item>a span {
     display: block;
     z-index: 100000000000000;
     position: relative;
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .header-menu .menu .current-menu-item.menu-item>a span:hover {
     color: var(--font-color);
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .header-menu .menu .current-menu-item.menu-item>a::after {
@@ -99,12 +110,12 @@
     width: 138%;
     height: 9px;
     margin-left: -8px;
-    transition: 0.5s all;
+    transition: 0.3s all;
 }
 
 .header-menu .menu .menu-item a {
     position: relative;
-    transition: 0.5s all ease-in;
+    transition: 0.3s all ease-in;
 }
 
 .header-menu .menu .sub-menu {
@@ -115,7 +126,7 @@
     min-width: 173px;
     margin-top: 5px;
     display: none;
-    transition: 0.5s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 
 .header-menu .menu .sub-menu .menu-item,
@@ -130,12 +141,12 @@
 
 .header-menu .menu .menu-item:hover .sub-menu {
     display: block;
-    transition: 0.5s all ease-in;
+    transition: 0.3s all ease-in;
 }
 
 .sub-menu:hover {
     display: block;
-    transition: 0.5s all ease-in;
+    transition: 0.3s all ease-in;
 }
 
 .side-menu {
@@ -254,6 +265,7 @@
     left: 0;
     bottom: 0;
 }
+
 .contact-row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -272,6 +284,7 @@
     left: 50px;
     right: 50px;
     font-size: 0.750em;
+    text-align: center;
 }
 
 .side-menu-footer .bg-word {
@@ -283,4 +296,69 @@
     line-height: 0.73;
     color: black;
 }
+
 /* see gallery_shortcode() in wp-includes/media.php */
+
+@media only screen and (max-width: 767px) {
+    .brand {
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 0 20px;
+    }
+
+    .brand-item {
+        display: flex !important;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 100px;
+        transition: 0.6s all;
+        width: 94vw;
+    }
+
+    .side-menu {
+        padding: 0 21px;
+    }
+
+    .side-menu-items {
+        left: 24px;
+    }
+
+    .header-menu {
+        position: fixed;
+        right: 0;
+        width: 169px;
+        top: 97px;
+        height: 100vh;
+        background-color: var(--header-bg);
+    }
+
+    .header-menu .menu {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        align-items: stretch;
+        transition: 0.3s all;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header-menu .menu .menu-item {
+        width: 100%;
+        padding: 14px 14px;
+        height: auto;
+    }
+
+    .header-menu .menu .sub-menu {
+        position: relative;
+        border: none;
+        transition: 0.3s all;
+    }
+
+    .header-menu .menu .menu-item .sub-menu .sub-menu-item {
+        border: none;
+        color: var(--header-sub-menu-color);
+    }
+}
