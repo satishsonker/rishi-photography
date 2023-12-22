@@ -56,7 +56,7 @@ export default function Header() {
                                         <div className='logo-block'>
                                             <div className='logo site-logo'>
                                                 <a href='#'>
-                                                    <img src='./logo64.png'></img>
+                                                    <img src='./assets/logo64.png'></img>
                                                     <span>{process.env.REACT_APP_SITE_NAME}</span>
                                                 </a>
                                             </div>
