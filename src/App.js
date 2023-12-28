@@ -1,22 +1,26 @@
-import { Route, Routes, HashRouter as Router } from "react-router-dom";
+import { Route, Routes, HashRouter as Router,useLocation } from "react-router-dom";
 import './App.css';
+import { useEffect, useState } from "react";
 import ErrorBoundary from "./components/errors/ErrorBoundary";
 import UrlNotFound from "./components/errors/UrlNotFound";
 import Header from "./components/common/header/Header";
 import Home from "./components/home/Home";
-import SideMenu from "./components/common/header/SideMenu";
-
+import Services from "./components/common/Services/Services";
 function App() {
+  const [hashValue, setHashValue] = useState("");
+  
+
   return (
     <>
       <Router>
         <div className="main-wrapper">
-          <Header></Header>
-          <main style={{ marginTop: '0px' }}>
-            <ErrorBoundary>
+          <Header setHashValue={setHashValue}></Header>
+          <main style={{ marginTop: hashValue === "" ? '0px' : "90px" }}>
+           <ErrorBoundary>
               <Routes>
                 <Route path='*' element={<UrlNotFound />} />
                 <Route path='/' element={<Home />} />
+                <Route path='/services' element={<Services />} />
               </Routes>
             </ErrorBoundary>
           </main>

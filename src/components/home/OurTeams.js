@@ -5,12 +5,12 @@ export default function OurTeams() {
      <div className='team-container'>
            <div className="vc_row">
            <div className="wpb_wrapper">
-                        <div className="heading-block">
-                            <h2 className="h">
-                                Our
-                                <span>Team</span>
-                            </h2>
-                        </div>
+           <div className='service'>
+            our <span>Team</span>
+            <div className='divider'>
+              ___
+            </div>
+          </div>
                         <div className="team-items row">
                             <div className="team-item item team-item col-xs-6 col-sm-4 col-md-3">
                                 <div className="wrap">

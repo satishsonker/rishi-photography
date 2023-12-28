@@ -1,0 +1,72 @@
+.service-items{
+padding: 20px;
+}
+.service-items .item.icon{
+    color: orange;
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+    transition: .5s all;
+}
+
+.service-items .item.icon:hover{
+    color: var(--font-color);
+    transition: .5s all;
+}
+
+.service-items .item.heading
+{
+    text-transform: uppercase;
+    color: var(--font-color);
+}
+
+.service-items .item.sub-heading
+{
+    color: var(--font-color);
+    font-size:0.9rem;
+    margin-top: 10px;
+    font-weight: 100;
+    text-align: start;
+}
+
+.service-items .item.readmore
+{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-items .item.readmore a{
+    color: orange !important;
+    transition: .5s all;
+}
+
+.service-items .item.readmore a:hover{
+    color: var(--font-color) !important;
+    transition: .5s all;
+}
+
+.service{
+    color: var(--font-color);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.service span{
+    color: orange;
+}
+.service .divider{
+    height: 0px;
+    line-height: 0;
+    color: gray;
+}
+

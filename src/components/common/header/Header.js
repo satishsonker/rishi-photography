@@ -1,22 +1,42 @@
 import React, { useState, useEffect, useRef } from 'react'
+import {useLocation } from "react-router-dom";
 import './header.css'
 import { Link } from 'react-router-dom'
 import SideMenu from './SideMenu'
 
-export default function Header() {
+export default function Header({setHashValue}) {
+    const location=useLocation();
+  useEffect(() => {
+    setHashValue(window.location.hash);
+  }, [location])
+    const headerMenu = [
+        { name: "Home", link: "/", subMenu: [] },
+        {
+            name: "Services", link: "/services", subMenu: [
+                { name: "Wedding Shoot", link: "/services" },
+                { name: "Videography", link: "/services" },
+                { name: "Still Photography", link: "/services" },
+                { name: "Cenematic Video", link: "/services" },
+                { name: "Youtube Video/Shots", link: "/services" },
+                { name: "Instagram Video/Shots", link: "/services" },
+            ]
+        },
+        { name: "About Us", link: "/aboutus", subMenu: [] },
+        { name: "Contact Us", link: "/contactus", subMenu: [] }
+    ]
     const [displaySideMenu, setDisplaySideMenu] = useState(false);
     const [showHeaderMenu, setShowHeaderMenu] = useState(true);
     const [screenWidth, setScreenWidth] = useState(window.screen.width);
     const headerRef = useRef();
-    const minMobileScreenWidth =parseInt(process.env.REACT_APP_MOBILE_MIN_SCREEN_WIDTH);
+    const minMobileScreenWidth = parseInt(process.env.REACT_APP_MOBILE_MIN_SCREEN_WIDTH);
     useEffect(() => {
 
         setScreenWidth(window.screen.width);
-        if (window.screen.width<minMobileScreenWidth){
-        setShowHeaderMenu(false);
+        if (window.screen.width < minMobileScreenWidth) {
+            setShowHeaderMenu(false);
             setDisplaySideMenu(false);
         }
-        else{
+        else {
             setDisplaySideMenu(false);
             setShowHeaderMenu(true);
         }
@@ -28,7 +48,7 @@ export default function Header() {
         if (document.documentElement.scrollTop > 50) {
             headerRef?.current?.classList?.add('bg-dark')
             headerRef?.current?.classList?.remove('bg-transparent')
-        } else {          
+        } else {
             headerRef?.current?.classList?.remove('bg-dark')
             headerRef?.current?.classList?.add('bg-transparent')
         }
@@ -48,7 +68,7 @@ export default function Header() {
                                             <Link className='d-md-none d-lg-none d-xl-none' target='_blank' to={`https://wa.me/${process.env.REACT_APP_WHATSAPP_NO}/?text=${encodeURI(process.env.REACT_APP_WHATSAPP_TEXT)}`}>
                                                 <i className="bi bi-whatsapp mx-3"></i>
                                             </Link>
-                                            <i className="bi bi-list" onClick={e =>{ screenWidth>minMobileScreenWidth? setDisplaySideMenu(pre => !pre):setShowHeaderMenu(pro=>!pro)}}></i>
+                                            <i className="bi bi-list" onClick={e => { screenWidth > minMobileScreenWidth ? setDisplaySideMenu(pre => !pre) : setShowHeaderMenu(pro => !pro) }}></i>
                                         </div>
                                         <div className='bar-icon mx-2'>
 
@@ -66,93 +86,33 @@ export default function Header() {
                                 {((screenWidth < minMobileScreenWidth && showHeaderMenu) || screenWidth >= minMobileScreenWidth) && <div className='col d-flex flex-row-reverse'>
                                     <nav className='header-menu'>
                                         <ul className='menu'>
-                                            <li className='current-menu-item menu-item'>
-                                                <Link to="/">
-                                                    <span>Home</span>
-                                                </Link>
-                                                <ul className='sub-menu'>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>Home11</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>BLOG</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>PAGES</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>GALLERY</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>SHOP</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>CONTACTS</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>BOOKING</span>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className='menu-item'>
-                                                <Link to="/">
-                                                    <span>BLOG</span>
-                                                </Link>
-                                            </li>
-                                            <li className='menu-item'>
-                                                <Link to="/">
-                                                    <span>PAGES</span>
-                                                </Link>
-                                            </li>
-                                            <li className='menu-item'>
-                                                <Link to="/">
-                                                    <span>GALLERY</span>
-                                                </Link>
-                                                <ul className='sub-menu'>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>Home 1</span>
-                                                        </Link>
-                                                    </li>
-                                                    <li className='sub-menu-item'>
-                                                        <Link to="/">
-                                                            <span>BLOG</span>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className='menu-item'>
-                                                <Link to="/">
-                                                    <span>SHOP</span>
-                                                </Link>
-                                            </li>
-                                            <li className='menu-item'>
-                                                <Link to="/">
-                                                    <span>CONTACTS</span>
-                                                </Link>
-                                            </li>
-                                            <li className='menu-item'>
-                                                <Link to="/">
-                                                    <span>BOOKING</span>
-                                                </Link>
-                                            </li>
+                                            {
+                                                headerMenu?.map((ele, index) => {
+                                                    return <>
+                                                        <li key={index} className={index === 0 ? 'current-menu-item menu-item' : "menu-item"}>
+                                                            <Link to={ele?.link}>
+                                                                <span>{ele?.name}</span>
+                                                            </Link>
+                                                            {ele?.subMenu?.length > 0 && <ul className='sub-menu'>
+                                                                {
+                                                                    ele?.subMenu?.map((innerEle, ind) => {
+                                                                        return <li key={ind} className='sub-menu-item'>
+                                                                            <Link to={innerEle?.link}>
+                                                                                <span>{innerEle?.name}</span>
+                                                                            </Link>
+                                                                        </li>
+                                                                    })
+                                                                }
+                                                            </ul>
+                                                            }
+                                                        </li>
+                                                    </>
+                                                })
+                                            }
                                         </ul>
                                     </nav>
-                                </div>}
+                                </div>
+                                }
                             </div>
                         </div>
                     </div>

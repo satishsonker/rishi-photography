@@ -27,4 +27,9 @@ main{
 }
 body{
     overflow-y: auto;
+    background-color: var(--header-bg);
+}
+a{
+    text-decoration: none;
+    color: var(--font-color);
 }
