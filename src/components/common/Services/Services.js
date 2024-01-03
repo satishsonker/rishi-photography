@@ -1,6 +1,7 @@
 import React from 'react'
 import './services.css'
 import { Link } from 'react-router-dom'
+import GalleryView from '../Gallery/GalleryView'
 
 export default function Services({showItems=8}) {
   const data=[{

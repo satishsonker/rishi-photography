@@ -21,6 +21,7 @@ export default function Header({setHashValue}) {
                 { name: "Instagram Video/Shots", link: "/services" },
             ]
         },
+        { name: "Gallery", link: "/gallery", subMenu: [] },
         { name: "About Us", link: "/aboutus", subMenu: [] },
         { name: "Contact Us", link: "/contactus", subMenu: [] }
     ]
@@ -66,7 +67,10 @@ export default function Header({setHashValue}) {
                                     <div className='col-auto d-flex align-items-center brand-item'>
                                         <div className='bar-icon mx-2'>
                                             <Link className='d-md-none d-lg-none d-xl-none' target='_blank' to={`https://wa.me/${process.env.REACT_APP_WHATSAPP_NO}/?text=${encodeURI(process.env.REACT_APP_WHATSAPP_TEXT)}`}>
-                                                <i className="bi bi-whatsapp mx-3"></i>
+                                                <i className="bi bi-whatsapp mr-3"></i>
+                                            </Link>
+                                            <Link className='d-md-none d-lg-none d-xl-none' target='_blank' to={`tel:${process.env.REACT_APP_CONTACT_NO}`}>
+                                            <i className="bi bi-telephone-fill mr-3"></i>
                                             </Link>
                                             <i className="bi bi-list" onClick={e => { screenWidth > minMobileScreenWidth ? setDisplaySideMenu(pre => !pre) : setShowHeaderMenu(pro => !pro) }}></i>
                                         </div>

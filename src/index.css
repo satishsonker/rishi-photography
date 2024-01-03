@@ -11,6 +11,7 @@
     --typing-text-color:orange;
     --footer-bg-color:#232323;
     --social-share-bg-color:#111111;
+    --transition: .5s all;
 }
 
 .email-phone{
@@ -32,4 +33,10 @@ body{
 a{
     text-decoration: none;
     color: var(--font-color);
+}
+.ml-3{
+    margin-left: 1rem !important;
+}
+.mr-3{
+    margin-right: 1rem !important;
 }

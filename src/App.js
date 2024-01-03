@@ -6,6 +6,7 @@ import UrlNotFound from "./components/errors/UrlNotFound";
 import Header from "./components/common/header/Header";
 import Home from "./components/home/Home";
 import Services from "./components/common/Services/Services";
+import GalleryView from "./components/common/Gallery/GalleryView";
 function App() {
   const [hashValue, setHashValue] = useState("");
   
@@ -21,6 +22,7 @@ function App() {
                 <Route path='*' element={<UrlNotFound />} />
                 <Route path='/' element={<Home />} />
                 <Route path='/services' element={<Services />} />
+                <Route path='/gallery' element={<GalleryView />} />
               </Routes>
             </ErrorBoundary>
           </main>

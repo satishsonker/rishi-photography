@@ -1,0 +1,135 @@
+.gallery-view {
+    width: 100vw;
+}
+
+.gallery-view .header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-view .header .title {
+    text-transform: uppercase;
+    color: var(--font-color);
+}
+
+.gallery-view .header .title span {
+    color: orange;
+}
+
+.gallery-view .header .view-type {
+    color: var(--font-color);
+    transition: var(--transition);
+}
+
+.gallery-view .header .view-type i.active {
+    color: orange;
+    transition: var(--transition);
+}
+
+
+.gallery-view .header .view-type i {
+    margin-left: 1vw;
+    font-size: 25px;
+    transition: var(--transition)
+}
+
+.gallery-view .header .view-type i:hover {
+    color: orange;
+    transition: var(--transition);
+}
+
+.gallery-view .data.grid1,
+.gallery-view .data.grid2,
+.gallery-view .data.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.gallery-view .data.grid1 .gallery-item .item {
+    width: 30vw;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.gallery-view .data.grid1 .gallery-item .item img,
+.gallery-view .data.grid2 .gallery-item .item img {
+    width: 100%;
+    border-radius: 4px;
+    max-height: 200px;
+}
+
+.gallery-view .data.list .gallery-item .item img {
+    width: 100%;
+    border-radius: 4px;
+    max-height: 600px;
+}
+
+.gallery-view .data.grid2 .gallery-item .item {
+    width: 22vw;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.gallery-view .data.list .gallery-item .item {
+    width: 92vw;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.slide .img-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 30px;
+    position: absolute;
+    bottom: -20px;
+    width: 100vw;
+}
+
+.slide .img-list .item {
+    margin: 10px;
+}
+
+.slide .img-list .item img {
+    transition: var(--transition);
+    width: 150px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.slide .img-list .item img:hover,
+.slide .img-list .item img.active {
+    transform: scale(1.1);
+    transition: var(--transition);
+    border: 2px solid orange;
+}
+
+.slide .main-img {
+    width: 100vw;
+    max-height: 400px;
+    padding: 0 10vw;
+    text-align: center;
+    margin-bottom: 330px;
+}
+
+.slide .main-img img {
+    height: 600px;
+    width: 100%;
+}
+
+.slide {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}

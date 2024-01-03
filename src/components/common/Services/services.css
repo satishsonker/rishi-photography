@@ -7,18 +7,24 @@ padding: 20px;
     width: 100%;
     text-align: left;
     margin-bottom: 15px;
-    transition: .5s all;
+    transition: var(--transition)
 }
 
 .service-items .item.icon:hover{
     color: var(--font-color);
-    transition: .5s all;
+    transition: var(--transition)
 }
 
 .service-items .item.heading
 {
     text-transform: uppercase;
     color: var(--font-color);
+    transition: var(--transition)
+}
+.service-items .item.heading:hover
+{
+    color: orange; 
+    transition: var(--transition)
 }
 
 .service-items .item.sub-heading
@@ -43,12 +49,12 @@ padding: 20px;
 
 .service-items .item.readmore a{
     color: orange !important;
-    transition: .5s all;
+    transition: var(--transition)
 }
 
 .service-items .item.readmore a:hover{
     color: var(--font-color) !important;
-    transition: .5s all;
+    transition: var(--transition)
 }
 
 .service{

@@ -40,10 +40,12 @@ export default function Gallery({ data }) {
             <div className='row'>
                 <div className='col-12'>
                     <div className="heading-block">
-                        <h2 className="h">
-                            Latest
-                            <span>Work</span>
-                        </h2>
+                    <div className='service'>
+            latest <span>Work</span>
+            <div className='divider'>
+              ___
+            </div>
+          </div>
                     </div>
                 </div>
                 <div className='col-12'>
