@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './galleryview.css'
-
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 export default function GalleryView({ data, modelId = "galleryViewModel", defaulView = "grid1", fullpage = false, title = "Image " }) {
+    defaulView=isBrowser?defaulView:"list";
     const [viewType, setViewType] = useState(defaulView);
     const [slideIndex, setSlideIndex] = useState(0);
     data = data === undefined || data === null ? [
@@ -28,8 +29,10 @@ export default function GalleryView({ data, modelId = "galleryViewModel", defaul
                         {title} <span>Gallery</span>
                     </div>
                     <div className='view-type'>
-                        <i onClick={e => setViewType('grid1')} title='Grid big view' class={`fa-solid fa-grip ${(viewType === 'grid1' ? 'active' : '')}`}></i>
-                        <i onClick={e => setViewType('grid2')} title='Grid small view' class={`fa-solid fa-braille ${(viewType === 'grid2' ? 'active' : '')}`}></i>
+                        {isBrowser && <>
+                            <i onClick={e => setViewType('grid1')} title='Grid big view' class={`fa-solid fa-grip ${(viewType === 'grid1' ? 'active' : '')}`}></i>
+                            <i onClick={e => setViewType('grid2')} title='Grid small view' class={`fa-solid fa-braille ${(viewType === 'grid2' ? 'active' : '')}`}></i>
+                        </>}
                         <i onClick={e => setViewType('list')} title='List view' class={`fa-solid fa-list ${(viewType === 'list' ? 'active' : '')}`}></i>
                         <i onClick={e => setViewType('slide')} title='Slide View' class={`fa-solid fa-images ${(viewType === 'slide' ? 'active' : '')}`}></i>
                     </div>

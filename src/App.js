@@ -21,7 +21,7 @@ function App() {
               <Routes>
                 <Route path='*' element={<UrlNotFound />} />
                 <Route path='/' element={<Home />} />
-                <Route path='/services' element={<Services />} />
+                <Route path='/services' element={<Services showItems={1000}/>} />
                 <Route path='/gallery' element={<GalleryView />} />
               </Routes>
             </ErrorBoundary>

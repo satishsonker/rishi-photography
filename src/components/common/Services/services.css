@@ -76,3 +76,19 @@ padding: 20px;
     color: gray;
 }
 
+@media only screen and (max-width: 1224px) {
+    .service-items .item.icon{
+        text-align: center;
+        font-size: 15vw;
+        transition: var(--transition);
+    }
+    .service-items .item.heading{
+    text-align: center;
+    }
+
+    .service-items .item.icon:hover{
+        transform: rotate(45deg);
+        transition: var(--transition);
+    }
+}
+

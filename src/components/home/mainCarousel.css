@@ -75,7 +75,7 @@
     transition: 0.5s all;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1224px) {
     .banner .bg-image {
         padding: 0 30px;
     }

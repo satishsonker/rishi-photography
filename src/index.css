@@ -12,6 +12,7 @@
     --footer-bg-color:#232323;
     --social-share-bg-color:#111111;
     --transition: .5s all;
+    --mobile-max-size:1224px
 }
 
 .email-phone{

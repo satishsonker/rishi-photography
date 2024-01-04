@@ -29,6 +29,7 @@ export default function Header({setHashValue}) {
     const [showHeaderMenu, setShowHeaderMenu] = useState(true);
     const [screenWidth, setScreenWidth] = useState(window.screen.width);
     const headerRef = useRef();
+    const headerMenuRef = useRef();
     const minMobileScreenWidth = parseInt(process.env.REACT_APP_MOBILE_MIN_SCREEN_WIDTH);
     useEffect(() => {
 
@@ -55,6 +56,11 @@ export default function Header({setHashValue}) {
         }
     }
 
+    const onHeaderMenuMouseOut=()=>{
+       // headerMenuRef.current.style.display='none';
+        //setShowHeaderMenu(false);
+    }
+
 
     return (
         <>
@@ -66,10 +72,10 @@ export default function Header({setHashValue}) {
                                 <div className='brand'>
                                     <div className='col-auto d-flex align-items-center brand-item'>
                                         <div className='bar-icon mx-2'>
-                                            <Link className='d-md-none d-lg-none d-xl-none' target='_blank' to={`https://wa.me/${process.env.REACT_APP_WHATSAPP_NO}/?text=${encodeURI(process.env.REACT_APP_WHATSAPP_TEXT)}`}>
+                                            <Link className='d-xl-none' target='_blank' to={`https://wa.me/${process.env.REACT_APP_WHATSAPP_NO}/?text=${encodeURI(process.env.REACT_APP_WHATSAPP_TEXT)}`}>
                                                 <i className="bi bi-whatsapp mr-3"></i>
                                             </Link>
-                                            <Link className='d-md-none d-lg-none d-xl-none' target='_blank' to={`tel:${process.env.REACT_APP_CONTACT_NO}`}>
+                                            <Link className='d-md-block d-lg-none d-xl-none' target='_blank' to={`tel:${process.env.REACT_APP_CONTACT_NO}`}>
                                             <i className="bi bi-telephone-fill mr-3"></i>
                                             </Link>
                                             <i className="bi bi-list" onClick={e => { screenWidth > minMobileScreenWidth ? setDisplaySideMenu(pre => !pre) : setShowHeaderMenu(pro => !pro) }}></i>
@@ -88,7 +94,7 @@ export default function Header({setHashValue}) {
                                     </div>
                                 </div>
                                 {((screenWidth < minMobileScreenWidth && showHeaderMenu) || screenWidth >= minMobileScreenWidth) && <div className='col d-flex flex-row-reverse'>
-                                    <nav className='header-menu'>
+                                    <nav className='header-menu' ref={headerMenuRef} onMouseOut={onHeaderMenuMouseOut}>
                                         <ul className='menu'>
                                             {
                                                 headerMenu?.map((ele, index) => {

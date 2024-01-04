@@ -59,9 +59,67 @@ export default function Services({showItems=8}) {
     name:"Biogeography videos shoot",
     title:"We invest all our professionalism, commitment and care."
   }]
+
+  
+// add
+// Wedding and engagement
+// add
+// Aerial wedding photography
+// add
+// Beach wedding photography
+// add
+// Bridal photography
+// add
+// Corporate photography
+// add
+// Couples photography
+// add
+// Destination wedding photography
+// add
+// Elopement photography
+// add
+// Events and parties
+// add
+// Family and group
+// add
+// Headshots and portraits
+// add
+// Honeymoons
+// add
+// Individual photography
+// add
+// Marriage proposal photography
+// add
+// Maternity and newborn
+// add
+// Photo booth rentals
+// add
+// Photo editing
+// add
+// Pre-wedding photo shoots
+// add
+// Product
+// add
+// Property photography
+// add
+// Rural wedding photography
+// add
+// School portraits
+// add
+// Trash-the-dress photography
+// add
+// Wedding albums
+// add
+// Wedding ceremony photography
+// add
+// Wedding photo packages
+// add
+// Wedding preparations photography
+// add
+// Wedding rehearsal photography 
   return (
     <>    
-    <div className="container">
+    <div className="">
       <div className='row'>
         <div className='col-12'>
           <div className='service'>

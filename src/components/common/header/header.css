@@ -26,7 +26,7 @@
     padding: 0 60px;
 }
 
-@media (min-width: 1199.98px) {
+@media (min-width: 1225px) {
     .site-header {
         display: block;
     }
@@ -300,7 +300,7 @@
 
 /* see gallery_shortcode() in wp-includes/media.php */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1224px) {
     .brand {
         width: 100%;
     }
@@ -361,5 +361,14 @@
     .header-menu .menu .menu-item .sub-menu .sub-menu-item {
         border: none;
         color: var(--header-sub-menu-color);
+    }
+    .logo.site-logo a{
+        font-size: 1.5rem;
+    }
+    .logo.site-logo a img{
+    }
+
+    .header-main-block {
+        height: 117px;
     }
 }
